@@ -1,7 +1,39 @@
-.dropdown {
-  position: relative;
-  display: inline-block;
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+  @font-face {
+  font-family: publicregular;
+  src: url(webfonts/PublicSans-ExtraLight.woff);
 }
+@font-face {
+font-family: publicbold;
+src: url(webfonts/PublicSans-Bold.woff);
+}
+
+body, html, p {
+  font-family: 'publicregular', sans-serif;
+  font-weight: normal; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'publicbold', sans-serif;
+  padding: 12px;
+  font-weight: normal; }
+
+.dropdownholder {
+  display: block;
+  padding: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+
 
 .dropdown-content, .dropdown-content1, .dropdown-content2 {
   display: none;
@@ -20,22 +52,58 @@
 .option {
   cursor: pointer;
 }
-
-.send {
-  width: 100px;
-  height: auto;
-  border: 1px solid black;
-  margin: 5px;
+.content {
+  margin-top: 15px;
   padding: 5px;
+  border: 1px dashed black;
+}
+
+.content:focus {
+  outline: none;
+  background: rgba(0,0,0,0.1);
+}
+.send {
+  text-align: center;
+  width: 100px;
+  border-radius: 8%;
+  color: white;
+  height: auto;
+  background-color: black;
+  margin-top: 15px;
+  padding: 3px;
 cursor: pointer;
+}
+.tabs, .newposttitle {
+  color: white;
+  border-radius: 8px;
+  margin: 5px;
+  z-index: 99999;
+}
+.newposttitle {
+  background-color: black;
+}
+.tabs {
+  display: flex;
+}
+
+.tab {
+  font-family: "publicbold";
+  padding: 10px;
+  width: 45%;
+  margin: 10px;
+  background-color: black;
+  text-align: center;
 }
 
 .post {
+  font-family 'publicbold';
+  position: relative;
   border: 1px solid black;
-  width: auto;
+  width: 100%;
   height: auto;
   padding: 5px;
-  margin: 5px;
+  margin-top: 5px;
+  margin-top: 5px;
   font-size: 20px;
 }
 
@@ -54,26 +122,65 @@ cursor: pointer;
   height: auto;
   padding: 5px;
   margin: 5px;
-  font-size: 10px;
+  font-size: 15px;
+  font-family: 'publicbold';
   cursor: pointer;
+  z-index: 9999;
+  visibility: hidden;
+}
+
+.yes .logged, .no .logged {
+  visibility: visible;
 }
 .yesvotes, .novotes {
   border: 1px solid black;
     width: auto;
   height: auto;
   padding: 3px;
-  margin: 14px;
+  margin: 5px;
   font-size: 10px;
+}
+
+.percentbar {
+  margin-top: 10px;
 }
 
 
 
 h1 {
+  text-align: center;
   font-size: 20px;
-  border: 1px solid black;
 }
 
 .postdate {
   margin: 5px;
   font-size: 13px;
+}
+
+.postcontent {
+  font-size: 38px;
+  font-family: 'publicbold';
+}
+
+.container {
+
+  width: 100vw;
+  margin: 5px auto;
+    padding: 10px;
+}
+
+.postcontent{
+  display: block;
+  margin: 15px;
+}
+
+.newpost {
+  display:none;
+}
+
+
+@media (min-width: 768px) {
+.container {
+  width: 40%;
+}
 }

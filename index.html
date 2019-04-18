@@ -6,37 +6,51 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
   <script src="scripts/jquery.js"></script>
   <script src="scripts/jquery-ui.js"></script>
   <script src="scripts/plugins.js"></script>
+    <link rel="stylesheet" type="text/css" href="loading-bar.css" />
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
   <script src="scripts/app.js"></script>
+  <script type="text/javascript" src="loading-bar.js"></script>
 </head>
 
 <body>
-  <div id="login">
-    login
-  </div>
-  <h1>
+  <div class="container">
+    <div id="login">
+      login
+    </div>
+    <div class="newpost">
+    <div class="newposttitle">
+      <h1>
 new post
 </h1>
-  <div class="dropdown">
-    Is it considered <span class="selection">sexist</span> when:
-    <div class="dropdown-content">
-      <span class="option">sexual assault</span><br>
-      <span class="option">sexual harassment</span><br>
-      <span class="option">gender discrimination</span>
+    </div>
+
+    <div class="dropdownholder">
+      <div class="dropdown">
+        Is it considered <span class="selection">sexist</span> when:
+        <div class="dropdown-content">
+          <span class="option">sexual assault</span><br>
+          <span class="option">sexual harassment</span><br>
+          <span class="option">gender discrimination</span>
+        </div>
+      </div>
+      <div class="content" contenteditable="true">...</div>
+      <div class="send">
+        publish
+      </div>
     </div>
   </div>
-  <div class="content" contenteditable="true">...</div>
-  <div class="send">
-    publish
+  <div class="feed">
+    <div class="tabs">
+<div class="tab recent">recent</div>
+<div class="tab popular">popular</div>
+    </div>
+    <div id="posts">
+    </div>
   </div>
-  <h1>
-posts
-</h1>
-  <div id="posts">
-  </div>
-
+</div>
 </body>
